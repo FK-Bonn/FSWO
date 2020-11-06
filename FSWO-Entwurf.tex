@@ -31,13 +31,15 @@ multilinesections%
 % Beides wird in der fertigen Version nicht angezeigt.
 \makeatletter
   \ifFK@draft% Version mit Kommentaren, die Absätze mit Kommentaren sind zusätzlich kursiv
-    \newcommand\oldT[1] {{\color{Gray}[\st{#1}]}}
-    \newcommand\bemFr[1]{{\color{Red}[#1]}}
-    \newcommand\bemFe[1]{{\color{Cyan}[#1]}}
+    \newcommand\oldT[1]  {{\color{Gray}[\st{#1}]}}
+    \newcommand\bemFr[1] {{\color{Red}[#1]}}
+    \newcommand\bemFe[1] {{\color{Cyan}[#1]}}
+    \newcommand\change[2]{{\oldT{#1}\color{Green}#2}}
   \else %Fertige Version
     \newcommand\oldT[1]{}% streichen
     \newcommand\bemFr[1]{}% streichen
     \newcommand\bemFe[1]{}% streichen
+    \newcommand\change[2]{#2}
   \fi
 \makeatother
 
@@ -59,7 +61,7 @@ multilinesections%
 \begingroup
 %% Remove comment to remove colours of the links in the table of contents
 %    \hypersetup{linkcolor=black}
-%    \tableofcontents
+    \tableofcontents
 \endgroup
 
 
@@ -91,11 +93,11 @@ Für einen Leser ohne Vorkenntnisse wird so nicht klar, welche Fachschaft auf we
 Daher sieht dieser Entwurf folgende Gliederung vor:
 § 3 Gegenstand der Wahl (Welche Fachschaft wählt welche Gremien auf welche Weise und wo muss man jeweils weiterlesen?), § 4 Wahl einer Fachschaftsvertretung und § 5 Wahl eines Fachschaftsrates (mit Details zum jeweiligen Gremium).
 
-Zusätzlich wird ein § 3a Amtszeit eingeführt und somit § 6 alt nach vorn gezogen. In der alten Fassung stand die Amtszeit mitten im Prozedere der Wahlen selbst, dabei gehört die Amtszeit doch thematisch zum zu wählenden Organ. Auch dies dient also der Übersichtlichkeit und Lesbarkeit.}
+Zusätzlich wird ein § 3a (jetzt 4) Amtszeit eingeführt und somit § 6 alt nach vorn gezogen. In der alten Fassung stand die Amtszeit mitten im Prozedere der Wahlen selbst, dabei gehört die Amtszeit doch thematisch zum zu wählenden Organ. Auch dies dient also der Übersichtlichkeit und Lesbarkeit.}
 
 \begin{contract}
 \Clause{title={Gegenstand der Wahl}}
-Fachschaften mit bis zu 500 Mitgliedern wählen nach § 5 dieser Ordnung in direkter Wahl einen Fachschaftsrat (FSR).
+Fachschaften mit bis zu 500 Mitgliedern wählen nach § 5 dieser Ordnung in direkter Wahl einen Fachschaftsrat (FSR), sofern die Fachschaftssatzung nicht die Wahl einer FSV vorsieht.
 Fachschaften mit 501 oder mehr Mitgliedern wählen nach § 4 dieser Ordnung in direkter Wahl eine Fachschaftsvertretung (FSV), die sodann einen FSR wählt (indirekte Wahl).
 
 Die Mitgliederzahl der Fachschaft richtet sich nach dem Wählendenverzeichnis.
@@ -104,10 +106,12 @@ Die §§ 6ff. dieser Ordnung betreffen die jeweilige direkte Wahl.
 
 \bemFr{\textbf{zu § 3 neu:} In diesem Kontext stand bisher ein Verweis in die §§ 26f. SdS – der wurde verworfen, da eine Umnummerierung der Satzung dann einen (wegen der nötigen Zustimmung zweier Gremien deutlich aufwendigeren) Änderungsprozess dieser Ordnung in Gang setzen würde.}
 
+\bemFe{Der Absatz 3a wird zu Absatz 4.}
+
 \begin{contract}
-\Clause{title={Amtszeit}, number=3a}
-Die Amtszeit der Mitglieder der Organe der Fachschaft \oldT{beträgt maximal ein} beträgt grundsätzlich ein Jahr und endet mit der Wahl von Nachfolgern.
-Nach Ablauf der Amtszeit bleiben die Mitglieder bis zur Wahl von Nachfolgern kommissarisch im Amt.
+\Clause{title={Amtszeit}}%, number=3a}
+Die Amtszeit der Mitglieder der Organe der Fachschaft \oldT{beträgt maximal ein} beträgt grundsätzlich ein Jahr und endet mit der Wahl von \change{Nachfolgern}{Nachfolgen}.
+Nach Ablauf der Amtszeit bleiben die Mitglieder bis zur Wahl von \change{Nachfolgern}{Nachfolgen} kommissarisch im Amt.
 \end{contract}
 
 \bemFr{Die Amtszeit kann je nach Wahltermin auch geringfügig länger als ein Jahr dauern, ersetze daher \enquote{maximal} in § 6 alt durch \enquote{grundsätzlich}.}
@@ -129,15 +133,25 @@ In diesem Fall beträgt die Anzahl ihrer Mitglieder 7.
 Sofern der FSR nicht direkt zu wählen ist, erfolgt die Wahl durch die FSV.
 Näheres regelt die Fachschaftssatzung vorbehaltlich der §§ 20f. dieser Ordnung und der SdS.
 
+
+\bemFe{Dieser Absatz wurde angepasst:}
+%Der FSR besteht aus:
+%\begin{enumerate}
+%  \item der Vorsitzenden,
+%  \item der stellvertretenden Vorsitzenden,
+%  \item der Finanzreferentin,
+%  \item bis zu 6 weiteren Mitgliedern, vorbehaltlich anderweitiger Regelung durch die Fachschaftssatzung sind dies 2,
+%  \item sowie darüber hinaus bis zu 2 zusätzlichen Mitgliedern für jede Fach-Abschluss-Kombination im Sinne der SdS, sofern die Fachschaftssatzung diese vorsieht.
+%Damit sind im Regelfall 5 Mitglieder zu wählen, sofern die Fachschaftssatzung nicht zusätzliche Mitglieder im Sinne der Nr. 4 und 5 vorsieht.
 Der FSR besteht aus:
 \begin{enumerate}
   \item der Vorsitzenden,
   \item der stellvertretenden Vorsitzenden,
   \item der Finanzreferentin,
-  \item bis zu 6 weiteren Mitgliedern, vorbehaltlich anderweitiger Regelung durch die Fachschaftssatzung sind dies 2,
-  \item sowie darüber hinaus bis zu 2 zusätzlichen Mitgliedern für jede Fach-Abschluss-Kombination im Sinne der SdS, sofern die Fachschaftssatzung diese vorsieht.
+  \item 2 bis 6 weiteren Mitgliedern, sowie
+  \item gegebenenfalls zusätzlichen Mitgliedern gemäß Absatz 3.
 \end{enumerate}
-Damit sind im Regelfall 5 Mitglieder zu wählen, sofern die Fachschaftssatzung nicht zusätzliche Mitglieder im Sinne der Nr. 4 und 5 vorsieht.
+Falls die Fachschaftssatzung zu der Anzahl nach Nr. 4 keine Regelung trifft, sind zwei Mitglieder nach Nr. 4 zu wählen.
 \end{contract}
 
 \bemFr{\textbf{Anmerkung zu § 6 neu:} Zunächst ist § 6 alt (Amtszeit) als § 3a neu hochgerutscht ist, sodann sind wir überein gekommen, dass es unsinnig ist, die Kosten der Wahl vor dem Wahlsystem zu regeln. Damit wird § 8 alt (Wahlsystem) zu § 6 neu. Es wird hieran ein Abs. 6 angehängt, der die Durchführung als Brief- oder Urnenwahl betrifft. Er entspricht dem § 9 I des vorigen Entwurfs einer FSWO-ÄO (darin Nr. 6), gehört aber thematisch zu Wahlsystem (vgl. auch Anmerkung zu § 9 neu, Rn. 136ff.}
@@ -315,8 +329,10 @@ Aufgaben der Wahlleitung können nach Absprache auch von ihren einzelnen Mitglie
 Die verschiedenen Anforderungen an Veröffentlichungen des Wahlausschusses werden im Folgenden in einer einzufügenden neuen Vorschrift vereinheitlicht und gebündelt.
 Dies dient auch der Lesbarkeit und Verständlichkeit, zudem können etwaige Änderungen so zentral und weniger bürokratisch umgesetzt werden.}
 
+\bemFe{10a wird zu 12}
+
 \begin{contract}
-\Clause{title={Veröffentlichungen des Wahlausschusses}, number=10a}
+\Clause{title={Veröffentlichungen des Wahlausschusses}}%, number=10a}
 Öffentliche Bekanntmachungen des Wahlausschusses sind an angemessenen Stellen jeweils als Aushang fachschaftsöffentlich sowie im Internet zu veröffentlichen.
 Der Aushang soll an ortsüblicher Stelle erfolgen.
 
