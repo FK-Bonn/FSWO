@@ -1,0 +1,346 @@
+% !TeX program = lualatex
+
+\documentclass[%
+draft,%
+%sectionprefix=SECTIONPREFIX,% Uncomment to change the section prefix
+multilinesections%
+]{fswo}
+
+\hypersetup{pdfinfo={%                  % Zusatzinformationen in PDF-Datei;
+                                        % alle Werte sind optional.
+    Author={Fachschaftenkonferenz Bonn},
+    CreationDate={D:2020MMTT181500},    % Datum der Erstellung %todo
+                                        % (D:JJJJMMTThhmmss)
+                                        % JJJJ  Jahr
+                                        % MM    Monat
+                                        % TT    Tag
+                                        % hh    Stunden
+                                        % mm    Minuten
+                                        % ss    Sekunden
+                                        %
+                                        % Standard: Das aktuelle Datum
+                                        %
+%   ModDate={D:20011010111111},         % Datum der letzten Modifikation
+    Title={Wahlordnung für die Wahlen der Fachschaftsvertretungen und Fachschaftsräte (Fachschaftswahlordnung - FSWO)},
+    Subject={Wahlordnung},
+    Keywords={FSWO, FK, Wahlordnung, Fachschaftswahlordnung, Fachschaft, Bonn}
+}}
+
+
+% Mit \oldT werden gestrichene Passagen markiert und mit \bemFr werden Bemerkungen von Franz eingefügt.
+% Beides wird in der fertigen Version nicht angezeigt.
+\makeatletter
+  \ifFK@draft% Version mit Kommentaren, die Absätze mit Kommentaren sind zusätzlich kursiv
+    \newcommand\oldT[1] {{\color{Gray}[\st{#1}]}}
+    \newcommand\bemFr[1]{{\color{Red}[#1]}}
+    \newcommand\bemFe[1]{{\color{Cyan}[#1]}}
+  \else %Fertige Version
+    \newcommand\oldT[1]{}% streichen
+    \newcommand\bemFr[1]{}% streichen
+    \newcommand\bemFe[1]{}% streichen
+  \fi
+\makeatother
+
+\begin{document}
+%\subject{Wahlordnung}
+\title{Wahlordnung für die Wahlen der Fachschaftsvertretungen und Fachschaftsräte\\
+(Fachschaftswahlordnung -- FSWO)}
+\subtitle{Rheinische Friedrich-Wilhelms-Universität Bonn}
+\author{}
+\date{{\itshape\normalsize%
+  Beschlossen am dd.\,mm.\,2020 durch die Fachschaftenkonferenz}}
+\publishers{\itshape\normalsize%
+  sowie am dd.\,mm.\,2020 durch das Studierendenparlament.}
+
+\maketitle
+
+\bemFr{\textbf{Anmerkungen zum Titel}: Dass diese Ordnung nur für Organe der Studierendenschaft der Universität Bonn gilt, ergibt sich bereits aus \S 1 dieser Ordnung (Geltungsbereich), die Streichung kürzt den Titel, der so weniger sperrig wirkt. Zusätzlich werden mit \enquote{Fachschaftswahlordnung} eine rechtlich eindeutige Kurzbezeichnung und mit \enquote{FSWO} eine rechtlich eindeutige Abkürzung eingeführt.}
+
+\begingroup
+%% Remove comment to remove colours of the links in the table of contents
+%    \hypersetup{linkcolor=black}
+%    \tableofcontents
+\endgroup
+
+
+\bemFr{\textbf{zur Zwischenüberschrift:} Die FSWO wird durch Einfügung von Abschnittsüberschriften gegliedert.}
+\section{ALLGEMEINE BESTIMMUNGEN}
+
+\begin{contract}
+\Clause{title={Geltungsbereich}}
+Diese Wahlordnung gilt für die Wahl zu den Fachschaftsvertretungen (FSV) und den Fachschaftsräten (FSR) der Universität Bonn.
+\end{contract}
+
+\bemFr{\textbf{Anmerkungen zu § 2 neu:}
+Im Folgenden wird § 4 alt zu § 2 neu, d. h. die Wahlgrundsätze werden nach vorn gezogen.
+Das dient der Übersichtlichkeit und billigt den Wahlgrundsätze eine gewisse Priorität zu.
+Weiterhin entfällt Abs. 1 S. 2 (bislang § 4 I 2), da dieser in § 3 neu aufgeht, vgl. Anmerkungen vor § 3.}
+
+\begin{contract}
+\Clause{title={Wahlgrundsätze}}
+Das zu wählende Organ wird von den Mitgliedern der Fachschaft jährlich in allgemeiner, unmittelbarer, freier, gleicher und geheimer Wahl gewählt. \oldT{Die Zahl der zu wählenden Mitglieder ergibt sich aus der Satzung der Studierendenschaft iVm der Fachschaftssatzung (siehe auch §§ 2 und 3 FSWO).}
+
+Die Wahl erfolgt als Persönlichkeitswahl.
+\end{contract}
+
+\bemFr{\textbf{Anmerkungen vor § 3:} In der derzeitigen FSWO wird in dem Paragraphen \enquote{Direkte 38 und indirekte Wahl des Fachschaftsrates} auch die Wahl der Fachschaftsvertretung behandelt und auch sonst ist dieser Aufbau sehr unübersichtlich und hat in der Vergangenheit zu Problemen geführt.
+
+Der erste Änderungsvorschlag der FK sah vor, hieraus jeweils einen Paragraphen zur Wahl der FSV und zur Wahl des FSR zu machen, dabei wurde jedoch die direkte Wahl eines FSR in Abs. 3 des Paragraphen zur Wahl der FSV behandelt, zudem wurden immer noch Gegenstand und Art der Wahl vermischt.
+Für einen Leser ohne Vorkenntnisse wird so nicht klar, welche Fachschaft auf welche Weise welche Gremien zu wählen hat.
+
+Daher sieht dieser Entwurf folgende Gliederung vor:
+§ 3 Gegenstand der Wahl (Welche Fachschaft wählt welche Gremien auf welche Weise und wo muss man jeweils weiterlesen?), § 4 Wahl einer Fachschaftsvertretung und § 5 Wahl eines Fachschaftsrates (mit Details zum jeweiligen Gremium).
+
+Zusätzlich wird ein § 3a Amtszeit eingeführt und somit § 6 alt nach vorn gezogen. In der alten Fassung stand die Amtszeit mitten im Prozedere der Wahlen selbst, dabei gehört die Amtszeit doch thematisch zum zu wählenden Organ. Auch dies dient also der Übersichtlichkeit und Lesbarkeit.}
+
+\begin{contract}
+\Clause{title={Gegenstand der Wahl}}
+Fachschaften mit bis zu 500 Mitgliedern wählen nach § 5 dieser Ordnung in direkter Wahl einen Fachschaftsrat (FSR).
+Fachschaften mit 501 oder mehr Mitgliedern wählen nach § 4 dieser Ordnung in direkter Wahl eine Fachschaftsvertretung (FSV), die sodann einen FSR wählt (indirekte Wahl).
+
+Die Mitgliederzahl der Fachschaft richtet sich nach dem Wählendenverzeichnis.
+Die §§ 6ff. dieser Ordnung betreffen die jeweilige direkte Wahl.
+\end{contract}
+
+\bemFr{\textbf{zu § 3 neu:} In diesem Kontext stand bisher ein Verweis in die §§ 26f. SdS – der wurde verworfen, da eine Umnummerierung der Satzung dann einen (wegen der nötigen Zustimmung zweier Gremien deutlich aufwendigeren) Änderungsprozess dieser Ordnung in Gang setzen würde.}
+
+\begin{contract}
+\Clause{title={Amtszeit}, number=3a}
+Die Amtszeit der Mitglieder der Organe der Fachschaft \oldT{beträgt maximal ein} beträgt grundsätzlich ein Jahr und endet mit der Wahl von Nachfolgern.
+Nach Ablauf der Amtszeit bleiben die Mitglieder bis zur Wahl von Nachfolgern kommissarisch im Amt.
+\end{contract}
+
+\bemFr{Die Amtszeit kann je nach Wahltermin auch geringfügig länger als ein Jahr dauern, ersetze daher \enquote{maximal} in § 6 alt durch \enquote{grundsätzlich}.}
+
+\begin{contract}
+\Clause{title={Wahl einer Fachschaftsvertretung}}
+Sofern eine FSV zu wählen ist, richtet sich ihre Größe nach der Größe der Fachschaft.
+Die Anzahl der Mitglieder beträgt in Fachschaften
+\begin{enumerate}
+  \item mit 501 bis 1.000 Mitgliedern 11,
+  \item mit 1.001 bis 2.000 Mitgliedern 15 und
+  \item mit 2.001 oder mehr Mitgliedern 19.
+\end{enumerate}
+
+In Fachschaften mit bis zu 500 Mitgliedern kann die Fachschaftssatzung eine Regelung über die Einrichtung einer FSV treffen.
+In diesem Fall beträgt die Anzahl ihrer Mitglieder 7.
+
+\Clause{title={Wahl des Fachschaftsrates}}
+Sofern der FSR nicht direkt zu wählen ist, erfolgt die Wahl durch die FSV.
+Näheres regelt die Fachschaftssatzung vorbehaltlich der §§ 20f. dieser Ordnung und der SdS.
+
+Der FSR besteht aus:
+\begin{enumerate}
+  \item der Vorsitzenden,
+  \item der stellvertretenden Vorsitzenden,
+  \item der Finanzreferentin,
+  \item bis zu 6 weiteren Mitgliedern, vorbehaltlich anderweitiger Regelung durch die Fachschaftssatzung sind dies 2,
+  \item sowie darüber hinaus bis zu 2 zusätzlichen Mitgliedern für jede Fach-Abschluss-Kombination im Sinne der SdS, sofern die Fachschaftssatzung diese vorsieht.
+\end{enumerate}
+Damit sind im Regelfall 5 Mitglieder zu wählen, sofern die Fachschaftssatzung nicht zusätzliche Mitglieder im Sinne der Nr. 4 und 5 vorsieht.
+\end{contract}
+
+\bemFr{\textbf{Anmerkung zu § 6 neu:} Zunächst ist § 6 alt (Amtszeit) als § 3a neu hochgerutscht ist, sodann sind wir überein gekommen, dass es unsinnig ist, die Kosten der Wahl vor dem Wahlsystem zu regeln. Damit wird § 8 alt (Wahlsystem) zu § 6 neu. Es wird hieran ein Abs. 6 angehängt, der die Durchführung als Brief- oder Urnenwahl betrifft. Er entspricht dem § 9 I des vorigen Entwurfs einer FSWO-ÄO (darin Nr. 6), gehört aber thematisch zu Wahlsystem (vgl. auch Anmerkung zu § 9 neu, Rn. 136ff.}
+
+\begin{contract}
+\Clause{title={Wahlsystem}}
+Eine Fachschaft bildet einen Wahlkreis.
+Jede wahlberechtigte Person hat eine Stimme, die sie für eine kandidierende Person abgibt.
+
+Gewählt sind die Personen mit den meisten Stimmen, die mindestens 1 Stimme erhalten haben.
+
+Bei Stimmgleichheit entscheidet die Wahlleitung durch Los über die Reihenfolge.
+
+Scheidet ein gewähltes Mitglied aus, so wird der Sitz derjenigen kandidierenden Person zugeteilt, die nach dem Wahlergebnis unter den bisher nicht berücksichtigten Personen die meisten Stimmen, jedoch mindestens eine Stimme, hat.
+Ist die Liste dieser Personen erschöpft, so bleibt der Sitz unbesetzt.
+
+Ist zu einem Zeitpunkt mindestens die Hälfte der Sitze des Organs unbesetzt, finden innerhalb der nach dieser Wahlordnung kürzestmöglichen Zeit Neuwahlen statt.
+D\oldT{er oder d}ie FSR-Vorsitzende beruft dann unverzüglich eine FSVV ein, auf der der Wahltermin festgelegt und ein Wahlausschuss gewählt wird. \bemFr{Anmerkung: Einhaltung des generischen Femininums in S. 2}
+
+Die Wahl erfolgt als Urnenwahl.
+Die Briefwahl einzelner Wahlberechtigter ist nach den Regeln § 16 dieser Ordnung möglich.
+\end{contract}
+
+\bemFr{\S 7 bleibt gleich}
+\begin{contract}
+\Clause{title={Kosten}}
+Alle der Fachschaft in Durchführung der Wahlen nach dieser Wahlordnung entstehenden Kosten werden aus ihrem Haushalt getragen.
+\end{contract}
+
+\bemFr{\textbf{Anmerkung zu § 8 neu:} Da § 8 alt zu § 6 neu geworden ist (vgl. Rn. 93ff.), wird § 9 118 alt zu § 8 neu. In Abs. 1 S. 1 wird durch Einfügung von \enquote{Stichtag} der dreißigste Tag vor dem ersten Wahltag als Stichtag legaldefiniert. Abs. 2 alt wird ersatzlos gestrichen, denn der ist teils widersprüchlich, teils redundant:
+Nachdem in Abs. 1 die Wahlberechtigung an den 30. Tag vor dem ersten Wahltag geknüpft wurde, trifft Abs. 2 S. 1 alt eine dem widersprechende Regelung, die an den Zeitpunkt der Wahl selbst anknüpft -- eine Ordnung darf aber keine sich widersprechenden Regelungen beinhalten.
+Sodann wiederholt Abs. 2 S. 2 alt das, was in Abs. 1 bereits festgelegt wurde.
+Deshalb entfällt Abs. 2 ersatzlos. In Abs. 3 alt bzw. Abs. 2 neu ist der Begriff \enquote{Studentensekretariat} durch den Begriff \enquote{Studierendensekretariat} zu ersetzen, da dieses inzwischen so heißt.}
+
+\section{DURCHFÜHRUNG DER WAHL}
+
+\begin{contract}
+\Clause{title={Wahlberechtigung}}
+Wahlberechtigt und wählbar sind die Mitglieder der jeweiligen Fachschaft, die am 30. Tag vor dem ersten Wahltag (Stichtag) Mitglied der Fachschaft sind.
+Maßgeblich für die Wahlberechtigung ist darüber hinaus die für die Wahlberechtigung angegebene Fach-Abschluss-Kombination (FAK).
+Zweit- und Gasthörerinnen und -hörer sind nicht wahlberechtigt.
+
+Die Wahlberechtigung ist im Studierendenausweis vermerkt.
+Die Änderung der Wahlberechtigung ist im Studierendensekretariat der Universität möglich.
+\end{contract}
+
+\bemFr{\textbf{Anmerkungen zu § 9 neu:}
+§ 9 neu entspricht § 9 des vorigen FSWO-ÄO-Entwurfs (Nr. 6), es entfällt jedoch der erste Absatz, da er thematisch nicht zum Wahltermin, sondern zum Wahlsystem gehört
+und deshalb als § 6 VI neu Aufnahme gefunden hat, vgl. Rn. 95ff.;
+weiterhin wird aus sprachlich-ästhetischen Gründen und um den Gleichlauf der Fristen zu betonen in Abs. 3 neu ein \enquote{Ebenfalls} eingefügt.}
+
+\begin{contract}
+\Clause{title={Festlegung des Wahltermins}}
+Gewählt wird an mindestens drei aufeinander folgenden nicht vorlesungsfreien Werktagen (Montag -- Freitag).
+
+Die FSV bestimmt spätestens bis zum 30. Tag vor dem 1. Wahltag den Termin und die Dauer der Wahl.
+Falls keine FSV besteht, übernimmt diese Aufgabe der FSR.
+
+Ebenfalls bis zum 30. Tag vor dem ersten Wahltag wählt die Fachschaftsvertretung den Wahlausschuss in öffentlicher Sitzung und benachrichtigt die Gewählten und das Fachschaftenkollektiv.
+Falls keine FSV besteht, übernimmt diese Aufgabe der FSR.
+Die Wahl von Wahlleitung und Wahlausschuss muss in der Sitzungseinladung angekündigt werden.
+\end{contract}
+
+\bemFr{\textbf{Anmerkungen zu § 10 neu:}
+Bis dato mussten Aufgaben, die die FSWO der Wahlleitung (ohne nähere Spezifizierung) zuweist, von beiden Mitgliedern übernommen werden, also von der Wahlleiterin und deren Stellvertreterin.
+Es stehen drei Vorschläge zur Lösung dieses Problems im Raum:
+
+Nr. 1 (Vorschlag des vorherigen ÄO-Entwurfs):
+Das Amt der Stellvertreterin entfällt, die Wahlleitung besteht nur noch aus einer Person.
+
+Nr. 2 (Vorschlag Franz Janßen):
+Das Organ \enquote{Wahlleitung} wird ersetzt durch das Organ 157 \enquote{Wahlleiterin}.
+Es wird aus den weiteren Mitgliedern des Wahlausschusses eine personelle Stellvertreterin gewählt,
+die aber wirklich nur Aufgaben und Rechte der Wahlleiterin in deren Absenz wahrnimmt, also nicht Teil der Wahlleitung ist.
+
+Nr. 3 (Vorschlag Marlon Brüßel):
+Es wird ein § 10 IX angefügt: \enquote{Aufgaben der Wahlleitung können nach Absprache auch von ihren einzelnen Mitgliedern wahrgenommen werden.}
+
+\textbf{Persönliche Anmerkung:} Ich (Franz, hi) möchte an dieser Stelle für Marlons Vorschlag plädieren.
+Mein eigener Vorschlag erscheint mir inzwischen recht unsinnig –- es besteht kein Grund,
+die Rechte und Pflichten der Stellvertreterin auf Fälle der Absenz der Amtsinhaberin zu beschränken, im Gegenteil:
+Unser Ziel ist ja eine effizientere Arbeitsteilung und nicht gar keine Arbeitsteilung mehr.
+Der Vorschlag Nr. 1 hat ein ähnliches Manko, warum sollten Fachschafts-Wahlausschüsse auf eine Stellvertreterin verzichten?
+Zudem ist Vorschlag Nr. 3 am unbürokratischsten, seine Umsetzung bedarf lediglich der Einfügung des Abs. 9 (vgl. Rn. 220ff.),
+zur Umsetzung meines Vorschlags dagegen müsste in der ganzen Ordnung der Begriff \enquote{Wahlleitung} durch den Begriff \enquote{Wahlleiterin} ersetzt werden.}
+
+\begin{contract}
+\Clause{title={Wahlorgane}}
+Der Wahlausschuss besteht aus der Wahlleiterin (im Folgenden \enquote{die Wahlleitung}) und mindestens zwei weiteren Mitgliedern.
+Mitglieder des Wahlausschusses dürfen für die Wahl nicht kandidieren.
+Die Wahlleitung soll der Fachschaft angehören.
+%
+\begin{addmargin}{1cm}
+\bemFr{Das ist die Formulierung, die Vorschlag Nr. 1 entspricht.
+Um Vorschlag Nr. 3 zu entsprechen, müsste es heißen: \enquote{besteht aus der Wahlleiterin und einer stellvertretenden Wahlleiterin (im Folgenden \enquote{die Wahlleitung})}.
+
+Zudem: Abs. 2 entfällt, wie im vorigen Entwurf vorgeschlagen, da obsolet, vgl. § 9 III neu, Rn. 146; hier folgt Abs. 2 neu:}
+\end{addmargin}
+
+
+Bis zum Stichtag wählt die FSV die Wahlleiterin, die übrigen Mitglieder des Wahlausschusses und aus deren Mitte eine stellvertretende Wahlleiterin in öffentlicher Sitzung.
+Die Wahl der jeweiligen Person ist wirksam, nachdem diese ihr zugestimmt hat.
+Die Wahl der Wahlorgane muss in der Sitzungseinladung der FSV angekündigt werden.
+Die FSV sollte das Fachschaftenkollektiv über die Gewählten benachrichtigen.
+%
+\begin{addmargin}{1cm}
+\bemFr{\textbf{Anmerkung zu Abs. 3 neu:} Wer die Wahlorgane bestimmt, wenn kein FSV besteht,
+war in der alten Wahlordnung recht \enquote{versteckt} mitten im Absatz über das Verfahren im Regelfall.
+Das soll nun etwas prominenter hervorgehoben werden, daher der eigene Absatz:}
+\end{addmargin}
+
+Wo keine FSV besteht, übernimmt der FSR die Aufgaben aus Absatz 2.
+\bemFe{Hier werden aus technischen Gründen erstmal die Absätze konsekutiv ohne Einschub gesetzt. In Franz' Enwurf war dies abweichend Absatz 2a.}
+%
+\begin{addmargin}{1cm}
+\bemFr{Abs. 3 neu wird aus dem vorigen Entwurf für eine FSWO-ÄO übernommen, es wird lediglich in S. 4 \enquote{Amt} durch \enquote{Aufgaben} ersetzt und die Formulierung an das generische Femininum angepasst,
+zudem hatte sich ein kleiner Fehlerteufel eingeschlichen:
+In S. 4, 1. Hs. war von der Wahlleitung die Rede, wo wohl das zurückgetretene WA-Mitglied gemeint war.}
+\end{addmargin}
+
+Mitglieder des Wahlausschusses können jederzeit zurücktreten.
+Sie sind verpflichtet, ihr Amt bis zur Wahl einer Nachfolgerin kommissarisch weiterzuführen.
+Im Falle eines Rücktritts ist durch die FSV bzw. den FSR zum frühestmöglichen Zeitpunkt eine Nachfolgerin zu wählen.
+Ist es dem zurückgetretenen Mitglied des Wahlausschusses nicht möglich, seine Aufgaben bis zur Wahl einer Nachfolge im Sinne dieser Ordnung auszuführen, kann es einmalig seine Aufgaben für diesen Zeitraum an ein anderes Mitglied übertragen.
+Über diesen Vorgang ist ein Protokoll zu führen.
+%
+\begin{addmargin}{1cm}
+\bemFr{in Abs. 4 wird ein Verweis auf § 10a eingefügt, siehe dortige Kommentierung}
+\end{addmargin}
+
+Die Einladungen zu den Sitzungen des Wahlausschusses erfolgen  durch öffentliche Bekanntmachung gem. § 10a dieser Ordnung durch die Wahlleitung spätestens 24 Stunden vor Sitzungsbeginn.
+Die weiteren Mitglieder des Wahlausschusses sind außerdem schriftlich oder per E-Mail zu laden.
+Der Wahlausschuss kann eine andere Form für die Ladung beschließen.
+Für die Wahlwoche kann der Wahlausschuss eine kürzere Frist beschließen.
+
+Der Wahlausschuss ist beschlussfähig, wenn die Wahlleitung anwesend ist und zur Sitzung ordnungsgemäß geladen wurde.
+Die Sitzungen des Wahlausschusses sind öffentlich.
+\bemFr{unverändert}
+%
+\begin{addmargin}{1cm}
+\bemFr{\textbf{zu Abs. 6:}
+Der Umgang mit Protokollen war bislang in der Ordnung ungeklärt,
+dem mit der hochschulpolitischen Parlamentspraxis nicht vertraute Anwender hat keinen Anhaltspunkt,
+wie er mit den Protokollen zu verfahren hat.
+Dies soll hier angepasst werden.]}
+\end{addmargin}
+%
+\oldT{Der Wahlausschuss fertigt über seine Sitzungen Protokolle an, die die Wahlleitung unterzeichnet.}
+
+Der Wahlausschuss fertigt über seine Sitzungen Protokolle an.
+Am Ende der Sitzung oder auf der nächsten Sitzung ist das Protokoll auf seine Richtigkeit zu prüfen, gegebenenfalls anzupassen und per Beschluss als richtig zu verabschieden.
+Danach ist das Protokoll durch die Wahlleitung zu unterzeichnen, gem. § 10a Abs. 3 dieser Ordnung zu veröffentlichen und zumindest bis zur nächsten Wahl im Original zur Einsichtnahme aufzubewahren.
+Nach seiner Konstituierung ist der Wahlausschuss für die Veröffentlichung und Aufbewahrung der Protokolle zuständig.
+
+Die Wahlleitung sichert in Abstimmung mit dem Fachschaftenkollektiv und der Hochschulverwaltung die technische Vorbereitung und Durchführung der Wahl.
+Sie führt die Beschlüsse des Wahlausschusses aus.
+\bemFr{unverändert}
+
+Der Wahlausschuss entscheidet bei Streitigkeiten nach Rücksprache mit dem Fachschaftenkollektiv über die Auslegung der Wahlordnung.
+\bemFr{unverändert}
+%
+\begin{addmargin}{1cm}
+\bemFr{\textbf{Anmerkung:} Sofern wir uns bzgl. Wahlleitung (vgl. Anmerkungen vor § 10, Rn. 151ff.) für Vorschlag Nr. 3
+222 entscheiden, muss hier der Abs. 9 zur Aufgabenverteilung innerhalb der Wahlleitung eingefügt werden.}
+\end{addmargin}
+
+Aufgaben der Wahlleitung können nach Absprache auch von ihren einzelnen Mitgliedern wahrgenommen werden.
+%
+\begin{addmargin}{1cm}
+\bemFr{\textbf{Anmerkung:} Der Vorschlag aus dem vorigen Entwurf einer FSWO-ÄO, einen Absatz zu virtuellen Sitzungen anzufügen, wird als § 11 VII umgesetzt.}
+\end{addmargin}
+\end{contract}
+
+\bemFr{\textbf{Anmerkungen zu § 10a neu:}
+Die verschiedenen Anforderungen an Veröffentlichungen des Wahlausschusses werden im Folgenden in einer einzufügenden neuen Vorschrift vereinheitlicht und gebündelt.
+Dies dient auch der Lesbarkeit und Verständlichkeit, zudem können etwaige Änderungen so zentral und weniger bürokratisch umgesetzt werden.}
+
+\begin{contract}
+\Clause{title={Veröffentlichungen des Wahlausschusses}, number=10a}
+Öffentliche Bekanntmachungen des Wahlausschusses sind an angemessenen Stellen jeweils als Aushang fachschaftsöffentlich sowie im Internet zu veröffentlichen.
+Der Aushang soll an ortsüblicher Stelle erfolgen.
+
+Öffentliche Bekanntmachungen erfolgen gemäß § 10 Abs. 4, § 12 Abs. 3, §13 Abs. 1, §16 Abs. 6 und § 19 Abs. 5 \bemFr{(AUF VOLLSTÄNDIGKEIT PRÜFEN; ENUMERATIONSPRINZIP!!! Hilfsweise \enquote{insbesondere} einfügen, dann ist entsprechende Anwendung möglich).}
+
+Protokolle gemäß § 10 Abs. 6 müssen nur auf der Website veröffentlicht werden.
+Sie sind zudem auf Nachfrage einsehbar zu machen.
+
+Veröffentlichungen im Internet können auf der Homepage des FSR erfolgen.
+Die Wahlleitung darf den FSR in diesem Fall mit der Veröffentlichung beauftragen, bleibt allerdings weiterhin für die Einhaltung dieser Ordnung verantwortlich.
+
+\end{contract}
+
+
+\vspace{2em}
+{\itshape%
+Ausgefertigt aufgrund des Beschlusses der Fachschaftenkonferenz am dd.~November~2020 sowie des Beschlusses des Studierendenparlaments am dd.~November~2020.
+
+Bonn, der dd.~November~2020}
+\vspace{1em}
+\begin{center}
+\textsc{Name Einfügen}\\
+Vorsitzender der \textsc{Amt Einfügen}
+\end{center}
+
+
+\end{document}
