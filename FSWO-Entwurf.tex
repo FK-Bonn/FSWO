@@ -32,16 +32,18 @@ multilinesections%
 \makeatletter
   \ifFK@draft% Version mit Kommentaren, die Absätze mit Kommentaren sind zusätzlich kursiv
     \newcommand\oldT[1]  {{\color{Gray}[\st{#1}]}}
+    \newcommand\newT[1]  {{\color{Green}[#1]}}
     \newcommand\bemFr[1] {{\color{Red}[#1]}}
     \newcommand\bemFe[1] {{\color{Cyan}[#1]}}
-    \newcommand\change[2]{{\oldT{#1}\color{Green}#2}}
   \else %Fertige Version
     \newcommand\oldT[1]{}% streichen
+    \newcommand\newT[1]{#1}
     \newcommand\bemFr[1]{}% streichen
     \newcommand\bemFe[1]{}% streichen
-    \newcommand\change[2]{#2}
   \fi
 \makeatother
+
+\newcommand\change[2]{\oldT{#1}\newT{#2}}
 
 \begin{document}
 %\subject{Wahlordnung}
@@ -97,7 +99,7 @@ Zusätzlich wird ein § 3a (jetzt 4) Amtszeit eingeführt und somit § 6 alt nac
 
 \begin{contract}
 \Clause{title={Gegenstand der Wahl}}
-Fachschaften mit bis zu 500 Mitgliedern wählen nach § 5 dieser Ordnung in direkter Wahl einen Fachschaftsrat (FSR), sofern die Fachschaftssatzung nicht die Wahl einer FSV vorsieht.
+Fachschaften mit bis zu 500 Mitgliedern wählen nach § 5 dieser Ordnung in direkter Wahl einen Fachschaftsrat (FSR)\newT{, sofern die Fachschaftssatzung nicht die Wahl einer FSV vorsieht.}
 Fachschaften mit 501 oder mehr Mitgliedern wählen nach § 4 dieser Ordnung in direkter Wahl eine Fachschaftsvertretung (FSV), die sodann einen FSR wählt (indirekte Wahl).
 
 Die Mitgliederzahl der Fachschaft richtet sich nach dem Wählendenverzeichnis.
@@ -152,6 +154,8 @@ Der FSR besteht aus:
   \item gegebenenfalls zusätzlichen Mitgliedern gemäß Absatz 3.
 \end{enumerate}
 Falls die Fachschaftssatzung zu der Anzahl nach Nr. 4 keine Regelung trifft, sind zwei Mitglieder nach Nr. 4 zu wählen.
+
+\newT{Sind in einer Fachschaft mehrere Fach-Abschluss-Kombinationen (FAKs) zusammengefasst und wird eine Fachschaftsvertretung gewählt, so kann diese gemäß § 27 Abs. 5 SdS für jede dieser FAKs bis zu zwei zusätzliche Personen in den FSR wählen, die einen Studiengang mit dieser FAK studieren.}
 \end{contract}
 
 \bemFr{\textbf{Anmerkung zu § 6 neu:} Zunächst ist § 6 alt (Amtszeit) als § 3a neu hochgerutscht ist, sodann sind wir überein gekommen, dass es unsinnig ist, die Kosten der Wahl vor dem Wahlsystem zu regeln. Damit wird § 8 alt (Wahlsystem) zu § 6 neu. Es wird hieran ein Abs. 6 angehängt, der die Durchführung als Brief- oder Urnenwahl betrifft. Er entspricht dem § 9 I des vorigen Entwurfs einer FSWO-ÄO (darin Nr. 6), gehört aber thematisch zu Wahlsystem (vgl. auch Anmerkung zu § 9 neu, Rn. 136ff.}
@@ -172,7 +176,7 @@ Ist zu einem Zeitpunkt mindestens die Hälfte der Sitze des Organs unbesetzt, fi
 D\oldT{er oder d}ie FSR-Vorsitzende beruft dann unverzüglich eine FSVV ein, auf der der Wahltermin festgelegt und ein Wahlausschuss gewählt wird. \bemFr{Anmerkung: Einhaltung des generischen Femininums in S. 2}
 
 Die Wahl erfolgt als Urnenwahl.
-Die Briefwahl einzelner Wahlberechtigter ist nach den Regeln § 16 dieser Ordnung möglich.
+\change{Die Briefwahl einzelner Wahlberechtigter}{Die Stimmabgabe durch Briefwahl} ist nach den Regeln § 16 dieser Ordnung möglich.
 \end{contract}
 
 \bemFr{\S 7 bleibt gleich}
@@ -190,9 +194,9 @@ Deshalb entfällt Abs. 2 ersatzlos. In Abs. 3 alt bzw. Abs. 2 neu ist der Begrif
 
 \begin{contract}
 \Clause{title={Wahlberechtigung}}
-Wahlberechtigt und wählbar sind die Mitglieder der jeweiligen Fachschaft, die am 30. Tag vor dem ersten Wahltag (Stichtag) Mitglied der Fachschaft sind.
+Wahlberechtigt und wählbar sind die \change{Mitglieder der jeweiligen Fachschaft}{Personen}, die am 30. Tag vor dem ersten Wahltag (Stichtag) Mitglied der Fachschaft sind.
 Maßgeblich für die Wahlberechtigung ist darüber hinaus die für die Wahlberechtigung angegebene Fach-Abschluss-Kombination (FAK).
-Zweit- und Gasthörerinnen und -hörer sind nicht wahlberechtigt.
+Zweit- und Gasthörerinnen\oldT{ und -hörer} sind nicht wahlberechtigt.
 
 Die Wahlberechtigung ist im Studierendenausweis vermerkt.
 Die Änderung der Wahlberechtigung ist im Studierendensekretariat der Universität möglich.
@@ -210,9 +214,9 @@ Gewählt wird an mindestens drei aufeinander folgenden nicht vorlesungsfreien We
 Die FSV bestimmt spätestens bis zum 30. Tag vor dem 1. Wahltag den Termin und die Dauer der Wahl.
 Falls keine FSV besteht, übernimmt diese Aufgabe der FSR.
 
-Ebenfalls bis zum 30. Tag vor dem ersten Wahltag wählt die Fachschaftsvertretung den Wahlausschuss in öffentlicher Sitzung und benachrichtigt die Gewählten und das Fachschaftenkollektiv.
+\oldT{Ebenfalls bis zum 30. Tag vor dem ersten Wahltag wählt die Fachschaftsvertretung den Wahlausschuss in öffentlicher Sitzung und benachrichtigt die Gewählten und das Fachschaftenkollektiv.
 Falls keine FSV besteht, übernimmt diese Aufgabe der FSR.
-Die Wahl von Wahlleitung und Wahlausschuss muss in der Sitzungseinladung angekündigt werden.
+Die Wahl von Wahlleitung und Wahlausschuss muss in der Sitzungseinladung angekündigt werden.}
 \end{contract}
 
 \bemFr{\textbf{Anmerkungen zu § 10 neu:}
@@ -242,30 +246,35 @@ zur Umsetzung meines Vorschlags dagegen müsste in der ganzen Ordnung der Begrif
 \Clause{title={Wahlorgane}}
 Der Wahlausschuss besteht aus der Wahlleiterin (im Folgenden \enquote{die Wahlleitung}) und mindestens zwei weiteren Mitgliedern.
 Mitglieder des Wahlausschusses dürfen für die Wahl nicht kandidieren.
-Die Wahlleitung soll der Fachschaft angehören.
+\change{Die Wahlleitung soll der Fachschaft angehören.}{Die Mitglieder des Wahlausschusses müssen der Studierendenschaft angehören.}
 %
+\bemFr{%
 \begin{addmargin}{1cm}
-\bemFr{Das ist die Formulierung, die Vorschlag Nr. 1 entspricht.
+Das ist die Formulierung, die Vorschlag Nr. 1 entspricht.
 Um Vorschlag Nr. 3 zu entsprechen, müsste es heißen: \enquote{besteht aus der Wahlleiterin und einer stellvertretenden Wahlleiterin (im Folgenden \enquote{die Wahlleitung})}.
 
-Zudem: Abs. 2 entfällt, wie im vorigen Entwurf vorgeschlagen, da obsolet, vgl. § 9 III neu, Rn. 146; hier folgt Abs. 2 neu:}
-\end{addmargin}
+Zudem: Abs. 2 entfällt, wie im vorigen Entwurf vorgeschlagen, da obsolet, vgl. § 9 III neu, Rn. 146; hier folgt Abs. 2 neu:
+\end{addmargin}}
 
-
-Bis zum Stichtag wählt die FSV die Wahlleiterin, die übrigen Mitglieder des Wahlausschusses und aus deren Mitte eine stellvertretende Wahlleiterin in öffentlicher Sitzung.
+\change{Bis zum Stichtag wählt die FSV die Wahlleiterin, die übrigen Mitglieder des Wahlausschusses und aus deren Mitte eine stellvertretende Wahlleiterin in öffentlicher Sitzung.
 Die Wahl der jeweiligen Person ist wirksam, nachdem diese ihr zugestimmt hat.
 Die Wahl der Wahlorgane muss in der Sitzungseinladung der FSV angekündigt werden.
-Die FSV sollte das Fachschaftenkollektiv über die Gewählten benachrichtigen.
+Die FSV sollte das Fachschaftenkollektiv über die Gewählten benachrichtigen.}{%
+Bis zum 30. Tag vor dem ersten Wahltag wählt die FSV die Wahlleiterin und die übrigen Mitglieder des Wahlausschusses in öffentlicher Sitzung, zu der öffentlich eingeladen werden muss.
+Falls keine FSV besteht, übernimmt diese Aufgabe der FSR.
+Die Wahl des Wahlauschusses muss in der Sitzungseinladung angekündigt werden.
+Die Wahl der jeweiligen Person ist wirksam, nachdem diese ihr zugestimmt hat.}\\
 %
 \begin{addmargin}{1cm}
-\bemFr{\textbf{Anmerkung zu Abs. 3 neu:} Wer die Wahlorgane bestimmt, wenn kein FSV besteht,
+\bemFr{\textbf{Anmerkung zu Abs. 2a neu:} Wer die Wahlorgane bestimmt, wenn kein FSV besteht,
 war in der alten Wahlordnung recht \enquote{versteckt} mitten im Absatz über das Verfahren im Regelfall.
 Das soll nun etwas prominenter hervorgehoben werden, daher der eigene Absatz:}
 \end{addmargin}
-
-Wo keine FSV besteht, übernimmt der FSR die Aufgaben aus Absatz 2.
-\bemFe{Hier werden aus technischen Gründen erstmal die Absätze konsekutiv ohne Einschub gesetzt. In Franz' Enwurf war dies abweichend Absatz 2a.}
 %
+\oldT{(2a) Wo keine FSV besteht, übernimmt der FSR die Aufgaben aus Absatz 2.}
+%\bemFe{Hier werden aus technischen Gründen erstmal die Absätze konsekutiv ohne Einschub gesetzt. In Franz' Enwurf war dies abweichend Absatz 2a.}
+
+
 \begin{addmargin}{1cm}
 \bemFr{Abs. 3 neu wird aus dem vorigen Entwurf für eine FSWO-ÄO übernommen, es wird lediglich in S. 4 \enquote{Amt} durch \enquote{Aufgaben} ersetzt und die Formulierung an das generische Femininum angepasst,
 zudem hatte sich ein kleiner Fehlerteufel eingeschlichen:
@@ -275,50 +284,28 @@ In S. 4, 1. Hs. war von der Wahlleitung die Rede, wo wohl das zurückgetretene W
 Mitglieder des Wahlausschusses können jederzeit zurücktreten.
 Sie sind verpflichtet, ihr Amt bis zur Wahl einer Nachfolgerin kommissarisch weiterzuführen.
 Im Falle eines Rücktritts ist durch die FSV bzw. den FSR zum frühestmöglichen Zeitpunkt eine Nachfolgerin zu wählen.
-Ist es dem zurückgetretenen Mitglied des Wahlausschusses nicht möglich, seine Aufgaben bis zur Wahl einer Nachfolge im Sinne dieser Ordnung auszuführen, kann es einmalig seine Aufgaben für diesen Zeitraum an ein anderes Mitglied übertragen.
+\change{Ist es dem zurückgetretenen Mitglied des Wahlausschusses nicht möglich, seine Aufgaben bis zur Wahl einer Nachfolge im Sinne dieser Ordnung auszuführen, kann es einmalig seine Aufgaben für diesen Zeitraum an ein anderes Mitglied übertragen.}{%
+Ist es einer zurückgetretenen Wahlleiterin nicht möglich, ihr Amt bis zur Wahl einer
+Nachfolge im Sinne dieser Ordnung auszuführen, kann sie einmalig ihr Amt für diesen
+Zeitraum an ein anderes Mitglied übertragen.}
 Über diesen Vorgang ist ein Protokoll zu führen.
 %
-\begin{addmargin}{1cm}
-\bemFr{in Abs. 4 wird ein Verweis auf § 10a eingefügt, siehe dortige Kommentierung}
-\end{addmargin}
-
-Die Einladungen zu den Sitzungen des Wahlausschusses erfolgen  durch öffentliche Bekanntmachung gem. § 10a dieser Ordnung durch die Wahlleitung spätestens 24 Stunden vor Sitzungsbeginn.
-Die weiteren Mitglieder des Wahlausschusses sind außerdem schriftlich oder per E-Mail zu laden.
-Der Wahlausschuss kann eine andere Form für die Ladung beschließen.
-Für die Wahlwoche kann der Wahlausschuss eine kürzere Frist beschließen.
-
-Der Wahlausschuss ist beschlussfähig, wenn die Wahlleitung anwesend ist und zur Sitzung ordnungsgemäß geladen wurde.
-Die Sitzungen des Wahlausschusses sind öffentlich.
-\bemFr{unverändert}
-%
-\begin{addmargin}{1cm}
-\bemFr{\textbf{zu Abs. 6:}
-Der Umgang mit Protokollen war bislang in der Ordnung ungeklärt,
-dem mit der hochschulpolitischen Parlamentspraxis nicht vertraute Anwender hat keinen Anhaltspunkt,
-wie er mit den Protokollen zu verfahren hat.
-Dies soll hier angepasst werden.]}
-\end{addmargin}
-%
-\oldT{Der Wahlausschuss fertigt über seine Sitzungen Protokolle an, die die Wahlleitung unterzeichnet.}
-
-Der Wahlausschuss fertigt über seine Sitzungen Protokolle an.
-Am Ende der Sitzung oder auf der nächsten Sitzung ist das Protokoll auf seine Richtigkeit zu prüfen, gegebenenfalls anzupassen und per Beschluss als richtig zu verabschieden.
-Danach ist das Protokoll durch die Wahlleitung zu unterzeichnen, gem. § 10a Abs. 3 dieser Ordnung zu veröffentlichen und zumindest bis zur nächsten Wahl im Original zur Einsichtnahme aufzubewahren.
-Nach seiner Konstituierung ist der Wahlausschuss für die Veröffentlichung und Aufbewahrung der Protokolle zuständig.
+\\\bemFe{Die Absätze alt 4 bis 6 wurden an den Anfang von Paragraphen neu 13 verschoben.}
 
 Die Wahlleitung sichert in Abstimmung mit dem Fachschaftenkollektiv und der Hochschulverwaltung die technische Vorbereitung und Durchführung der Wahl.
 Sie führt die Beschlüsse des Wahlausschusses aus.
-\bemFr{unverändert}
+%\bemFr{unverändert}
 
 Der Wahlausschuss entscheidet bei Streitigkeiten nach Rücksprache mit dem Fachschaftenkollektiv über die Auslegung der Wahlordnung.
-\bemFr{unverändert}
+%\bemFr{unverändert}
 %
 \begin{addmargin}{1cm}
 \bemFr{\textbf{Anmerkung:} Sofern wir uns bzgl. Wahlleitung (vgl. Anmerkungen vor § 10, Rn. 151ff.) für Vorschlag Nr. 3
 222 entscheiden, muss hier der Abs. 9 zur Aufgabenverteilung innerhalb der Wahlleitung eingefügt werden.}
 \end{addmargin}
 
-Aufgaben der Wahlleitung können nach Absprache auch von ihren einzelnen Mitgliedern wahrgenommen werden.
+\change{Aufgaben der Wahlleitung können nach Absprache auch von ihren einzelnen Mitgliedern wahrgenommen werden.}{%
+Die Wahlleitung kann einzelne ihrer Aufgaben nach Absprache auch anderen Wahlausschussmitgliedern übertragen. Über diesen Vorgang ist ein Protokoll zu führen.}
 %
 \begin{addmargin}{1cm}
 \bemFr{\textbf{Anmerkung:} Der Vorschlag aus dem vorigen Entwurf einer FSWO-ÄO, einen Absatz zu virtuellen Sitzungen anzufügen, wird als § 11 VII umgesetzt.}
@@ -336,12 +323,12 @@ Dies dient auch der Lesbarkeit und Verständlichkeit, zudem können etwaige Änd
 Öffentliche Bekanntmachungen des Wahlausschusses sind an angemessenen Stellen jeweils als Aushang fachschaftsöffentlich sowie im Internet zu veröffentlichen.
 Der Aushang soll an ortsüblicher Stelle erfolgen.
 
-Öffentliche Bekanntmachungen erfolgen gemäß § 10 Abs. 4, § 12 Abs. 3, §13 Abs. 1, §16 Abs. 6 und § 19 Abs. 5 \bemFr{(AUF VOLLSTÄNDIGKEIT PRÜFEN; ENUMERATIONSPRINZIP!!! Hilfsweise \enquote{insbesondere} einfügen, dann ist entsprechende Anwendung möglich).}
+\oldT{Öffentliche Bekanntmachungen erfolgen gemäß § 10 Abs. 4, § 12 Abs. 3, §13 Abs. 1, §16 Abs. 6 und § 19 Abs. 5.} \bemFr{(AUF VOLLSTÄNDIGKEIT PRÜFEN; ENUMERATIONSPRINZIP!!! Hilfsweise \enquote{insbesondere} einfügen, dann ist entsprechende Anwendung möglich).}
 
-Protokolle gemäß § 10 Abs. 6 müssen nur auf der Website veröffentlicht werden.
+Protokolle gemäß § 10 Abs. 6 müssen nur \change{auf der Website}{im Internet} veröffentlicht werden.
 Sie sind zudem auf Nachfrage einsehbar zu machen.
 
-Veröffentlichungen im Internet können auf der Homepage des FSR erfolgen.
+Veröffentlichungen im Internet \change{können auf der Homepage des FSR erfolgen.}{Veröffentlichungen im Internet sollen auf der Webpräsenz der Fachschaft erfolgen.}
 Die Wahlleitung darf den FSR in diesem Fall mit der Veröffentlichung beauftragen, bleibt allerdings weiterhin für die Einhaltung dieser Ordnung verantwortlich.
 \end{contract}
 
@@ -360,10 +347,41 @@ Ein Abs. 6 wird eingeführt, der einen Verweis auf Einladung,256 Beschlussfähig
 dies hat den Zweck, dass der eine Sitzung vorbereitende Leser dieser Ordnung auf diese Punkte auch dann hingewiesen wird,
 wenn er nur die Norm zu Sitzungen liest. Im gleichen Absatz soll die Möglichkeit virtueller Sitzungen geregelt werden.}
 
+\bemFe{Der erste Absatz wird in zwei Absätze aufgeteilt.}
 \begin{contract}
 \Clause{title={Sitzungen des Wahlausschusses}}
+\begin{addmargin}{1cm}
+\bemFr{in Abs. \change{4}{1} wird ein Verweis auf \change{§ 10a}{§ 12} eingefügt, siehe dortige Kommentierung.}\bemFe{Die Absätze neu 1 bis 3 wurden aus § neu 11 her verschoben.}
+\end{addmargin}
+
+Die Einladungen zu den Sitzungen des Wahlausschusses erfolgen durch öffentliche Bekanntmachung gem. § 10a dieser Ordnung durch die Wahlleitung spätestens 24 Stunden vor Sitzungsbeginn.
+Die weiteren Mitglieder des Wahlausschusses sind außerdem schriftlich oder per E-Mail zu laden.
+Der Wahlausschuss kann eine andere Form für die Ladung beschließen.
+Für die Wahlwoche kann der Wahlausschuss eine kürzere Frist beschließen.
+
+Der Wahlausschuss ist beschlussfähig, wenn die Wahlleitung anwesend ist und zur Sitzung ordnungsgemäß \newT{und öffentlich} geladen wurde.
+Die Sitzungen des Wahlausschusses sind öffentlich.
+%
+\begin{addmargin}{1cm}
+\bemFr{\textbf{zu Abs. 6:}
+Der Umgang mit Protokollen war bislang in der Ordnung ungeklärt,
+dem mit der hochschulpolitischen Parlamentspraxis nicht vertraute Anwender hat keinen Anhaltspunkt, wie er mit den Protokollen zu verfahren hat.
+Dies soll hier angepasst werden.]}
+\end{addmargin}
+%
+\oldT{Der Wahlausschuss fertigt über seine Sitzungen Protokolle an, die die Wahlleitung unterzeichnet.}
+
+Der Wahlausschuss fertigt über seine Sitzungen Protokolle an.
+Am Ende der Sitzung oder auf der nächsten Sitzung ist das Protokoll auf seine Richtigkeit zu prüfen, gegebenenfalls anzupassen und per Beschluss als richtig zu verabschieden.
+Danach ist das Protokoll durch die Wahlleitung zu unterzeichnen,
+\change{gem. § 10a Abs. 3 dieser Ordnung zu veröffentlichen und zumindest bis zur nächsten Wahl im Original zur Einsichtnahme aufzubewahren.
+Nach seiner Konstituierung ist der Wahlausschuss für die Veröffentlichung und Aufbewahrung der Protokolle zuständig.}{%
+gem. § 10a Abs. 3 zu veröffentlichen und gem. § 23 Abs. 6 dieser Ordnung durch den FSR im Original zur Einsichtnahme aufzubewahren.
+Der Wahlauschuss ist für die Veröffentlichung der Protokolle zuständig.}
+
 Bis zum 25. Tag vor dem ersten Wahltag findet die konstituierende Sitzung des Wahlausschusses statt.
-Bis zum gleichen Tag fasst der Wahlausschuss folgende Beschlüsse:
+
+\change{Bis zum gleichen Tag}{Bis zum 25. Tag vor dem ersten Wahltag} fasst der Wahlausschuss folgende Beschlüsse:
 \begin{enumerate}
 \item Festlegung der Urnenstandorte und -öffnungszeiten,
 \item Festlegung der Auslageorte für das Wählendenverzeichnis und des Zeitraums der Auslage,
@@ -374,15 +392,16 @@ Bis zum gleichen Tag fasst der Wahlausschuss folgende Beschlüsse:
 Die Frist für die Einreichung von Kandidaturen, Briefwahlanträgen und Einsprüchen gegen das Wählendenverzeichnis darf frühestens auf dem 13. Tag und spätestens auf dem 10. Tag vor dem ersten Wahltag liegen.
 Sie darf nicht auf einem vorlesungsfreien Tag liegen.
 
-Der Wahlausschuss kann, sofern äußere Umstände dies erfordern, auf einer weiteren Sitzung Beschlüsse nach Absatz 1 mit Einstimmigkeit der anwesenden Mitglieder neu fassen.
-Die Frist nach Absatz 1 Nr. 3 darf nicht auf diesem Weg vorverlegt werden.
+Der Wahlausschuss kann, sofern äußere Umstände dies erfordern, auf einer weiteren Sitzung Beschlüsse nach Absatz 2 mit Einstimmigkeit der anwesenden Mitglieder neu fassen.
+Die Frist nach Absatz 2 Nr. 3 darf nicht auf diesem Weg \change{vorverlegt}{auf einen früheren Zeitpunkt verlegt} werden.
+%TODO: Müsste das nich "späteren" heißen?
 
 Eine weitere Sitzung des Wahlausschusses findet unmittelbar nach Ablauf der Frist für die Einreichung von Kandidaturen, Briefwahlanträgen und Einsprüchen gegen das Wählendenverzeichnis statt.
-Auf ihr fasst der Wahlausschuss nach Prüfung der eingereichten Kandidaturen folgende Beschlüsse:
+\change{Auf ihr fasst der Wahlausschuss nach Prüfung der eingereichten Kandidaturen folgende Beschlüsse:}{%
+Auf ihr fasst der Wahlausschuss nach Prüfung der eingereichten Kandidaturen und gegebenenfalls Korrektur von vom Wahlausschuss selbst behebbaren Mängeln folgende Beschlüsse:}
 \begin{enumerate}
-\item Zulassung der mängelfreien Kandidaturen zur Wahl gem. § 14 Abs. 3 S. 1 dieser Ordnung,
-\item ggf. Feststellung von Mängeln in eingereichten Kandidaturen 280 und Setzen einer,
-\item angemessenen Nachfrist im Sinne von § 14 Abs. 3 S. 2 dieser Ordnung,
+\item Zulassung der mängelfreien Kandidaturen zur Wahl\oldT{ gem. § 14 Abs. 3 S. 1 dieser Ordnung},
+\item ggf. Feststellung von Mängeln in eingereichten Kandidaturen und Setzen einer angemessenen Nachfrist\oldT{ im Sinne von § 14 Abs. 3 S. 2 dieser Ordnung},
 \item ggf. Entscheidung über Anträge auf Briefwahl,
 \item ggf. Entscheidung über Einsprüche gegen das Wählendenverzeichnis.
 \end{enumerate}
@@ -390,14 +409,15 @@ Auf ihr fasst der Wahlausschuss nach Prüfung der eingereichten Kandidaturen fol
 Falls eine Nachfrist im Sinne von Abs. 3 Punkt 2 gesetzt wurde, findet eine weitere Sitzung des Wahlausschusses unverzüglich nach Ablauf dieser Frist statt.
 Auf dieser Sitzung entscheidet der Wahlausschuss über die Zulassung der übrigen Kandidaturen.
 
-Nachdem über die Zulassung aller Kandidaturen entschieden wurde, ist die Reihenfolge, in der die Kandidatinnen gemäß § 15 Abs. 2 dieser Ordnung auf dem Stimmzettel abgedruckt werden, durch den Wahlausschuss festzulegen.
+\change{Nachdem über die Zulassung aller Kandidaturen entschieden wurde, ist die Reihenfolge, in der die Kandidatinnen gemäß § 15 Abs. 2 dieser Ordnung auf dem Stimmzettel abgedruckt werden, durch den Wahlausschuss festzulegen.}{%
+Nachdem über die Zulassung aller Kandidaturen entschieden wurde, ist die zufällige Reihenfolge, in der die Kandidaturen auf dem Stimmzettel abgedruckt werden, durch den Wahlausschuss auszulosen.}
 
 Eine weitere Sitzung des Wahlausschusses findet zur Auszählung der Wahl statt. Auf ihr stellt der Wahlausschuss das Wahlergebnis fest.
 
 Die Wahlleitung kann zu weiteren Sitzungen einladen.
 
-Bei jeder Sitzung des Ausschusses ist § 10 Absätze 4 bis 6 dieser Ordnung einzuhalten.
-Die Wahlleitung kann festlegen, dass Sitzungen des Wahlausschusses als virtuelle Sitzung in elektronischer Kommunikation stattfinden, solange höherrangige Rechtsquellen dies erlauben.
+\oldT{Bei jeder Sitzung des Ausschusses ist § 10 Absätze 4 bis 6 dieser Ordnung einzuhalten.}
+Die Wahlleitung kann festlegen, dass Sitzungen des Wahlausschusses als virtuelle Sitzung in elektronischer Kommunikation stattfinden\oldT{, solange höherrangige Rechtsquellen dies erlauben}.
 Die Wahlleitung stellt sicher, dass die Öffentlichkeit auch an elektronischen Sitzungen teilnehmen kann.
 \end{contract}
 
@@ -417,16 +437,19 @@ Der Antrag ist an das Fachschaftenkollektiv zu richten.
 Das Wählendenverzeichnis wird von der Wahlleitung bis spätestens zum 19. Tag vor dem ersten Wahltag übernommen.
 
 Bei der Aufstellung und Handhabung des Wählendenverzeichnisses ist den Erfordernissen des Datenschutzes Rechnung zu tragen.
-Insbesondere ist dafür Sorge zu tragen, dass Abschriften und Kopien vom Wählendenverzeichnis durch Dritte unterbleiben.
+Insbesondere ist dafür Sorge zu tragen,
+\change{dass Abschriften und Kopien vom Wählendenverzeichnis durch Dritte unterbleiben.}{%
+dass das Wählendenverzeichnis nur berechtigten Personen ausgehändigt wird und dass Abschriften und Kopien vom Wählendenverzeichnis durch Dritte unterbleiben.}
 
-Das Wählendenverzeichnis wird vor Ablauf der Frist für Einsprüche gegen das Wählendenverzeichnis nach §§ 11 Abs. 1, 12 Abs. 4 dieser Ordnung an mindestens 3 Werktagen (Montag - Freitag) ausgelegt.
+Das Wählendenverzeichnis wird vor Ablauf der Frist für Einsprüche gegen das Wählendenverzeichnis \oldT{nach §§ 11 Abs. 1, 12 Abs. 4 dieser Ordnung }an mindestens 3 Werktagen (Montag - Freitag) ausgelegt.
 
 Einsprüche gegen die Richtigkeit des Wählendenverzeichnisses können beim Wahlausschuss bis zur gesetzten Frist schriftlich eingereicht werden.
 Der Einspruch muss begründet sein.
 Der Wahlausschuss entscheidet über Einsprüche und passt das Wählendenverzeichnis entsprechend an.
 
-Die Entscheidungen über Einsprüche sind gem. § 10a dieser Ordnung öffentlich 320 bekanntzumachen und sollen dem FSR zwecks Rücksprache mit der Verwaltung angezeigt werden,
-um einem erneuten Auftreten der selben Mängel vorzubeugen.
+\change{Die Entscheidungen über Einsprüche sind gem. § 10a dieser Ordnung öffentlich bekanntzumachen und sollen dem FSR zwecks Rücksprache mit der Verwaltung angezeigt werden,
+um einem erneuten Auftreten der selben Mängel vorzubeugen.}{%
+Die Entscheidungen über Einsprüche sind zu protokollieren und den betroffenen Personen mitzuteilen und sollen dem Fachschaftenkollektiv zwecks Rücksprache mit der Verwaltung angezeigt werden, um einem erneuten Auftreten der selben Mängel vorzubeugen.}
 \end{contract}
 
 \bemFr{\textbf{zu § 13:} in Abs. 1 wird auf den neu geschaffenen § 10a verwiesen}
@@ -443,7 +466,7 @@ Die Bekanntmachung muss mindestens enthalten:
 \item die Zahl der zu wählenden Mitglieder,
 \item die Frist, innerhalb derer Kandidaturen eingereicht werden können,
 \item das für die Entgegennahme der Kandidaturen zuständige Organ,
-\item eine Darstellung des Wahlsystems nach § 8,
+\item eine Darstellung des Wahlsystems nach § 7,
 \item einen Hinweis darauf, dass nur wählen kann, wer im Wählendenverzeichnis eingetragen ist,
 \item einen Hinweis auf Ort und Zeit der Auslegung des Wählendenverzeichnisses,
 \item einen Hinweis auf die Einspruchsmöglichkeit gegen das Wählendenverzeichnis,
@@ -465,13 +488,18 @@ Nicht fristgerecht eingereichte Kandidaturen sind von der Wahlleitung zurückzuw
 Eine Kandidatur muss mindestens enthalten:
 \begin{enumerate}
 \item Familienname(n) der kandidierenden Person,
-\item Vorname(n) der kandidierenden Person,
+\item \change{Vorname(n) der kandidierenden Person,}{alle Vornamen der kandidierenden Person, welche in die Matrikel eingetragen sind,}
+\item \newT{der Name, wie er auf dem Stimmzettel stehen soll,}
 \item ladungsfähige Anschrift der kandidierenden Person,
 \item E-Mail-Adresse der kandidierenden Person,
 \item Matrikelnummer der kandidierenden Person,
 \item Bezeichnung der Wahl, für die die Kandidatur gelten soll,
 \item Unterschrift der kandidierenden Person.
 \end{enumerate}
+
+\newT{Über die Zulässigkeit des Namens in Abs. 2 Nr. 3 entscheidet der Wahlausschuss.
+Der Name in Abs. 2 Nr. 3 ist zu begründen, wenn es nicht um das Weglassen von Teilen der Namen nach Abs. 2 Punkt 1 und 2 geht.
+Dieser ist anzunehmen, wenn der Name öffentlich bekannt und eindeutig ist.}
 
 Die Wahlleitung gibt unverzüglich die Namen der gemäß § 11 Abs. 3 und 4 als gültig 361 zugelassenen Kandidaturen öffentlich innerhalb der Studierendenschaft und an geeigneter Stelle im Internet bekannt.
 Die Bekanntgabe enthält Ort und Datum ihrer Veröffentlichung und wird von der Wahlleitung unterschrieben.
@@ -492,7 +520,7 @@ Die Stimmzettel für die Wahlen enthalten:
 \begin{enumerate}
 \item die Bezeichnung der Wahl, für die sie gelten,
 \item einen Hinweis auf die Anzahl der Stimmen, die vergeben werden dürfen, und
-\item die Namen der Kandidierenden in einer zuvor nach § 11 Abs. 5 dieser Ordnung vom Wahlausschuss festgelegten Reihenfolge.
+\item die Namen der Kandidierenden in einer zuvor \change{nach § 11 Abs. 5 dieser Ordnung vom Wahlausschuss festgelegten Reihenfolge}{vom Wahlausschuss gelosten zufälligen Reihenfolge}.
 \end{enumerate}
 Bei dem Namen jeder Kandidatur wird ein ankreuzbares Feld platziert.
 
@@ -568,7 +596,7 @@ Nach Beendigung eines jeden Wahltages hat die Wahlleitung für die bestmöglich 
 
 Ergeben sich bei der Feststellung der ordnungsgemäßen Versiegelung Unregelmäßigkeiten, so hat der Wahlausschuss die erforderlichen Maßnahmen zu treffen.
 
-Werbung für einzelne Kandidaten ist in Sicht- und Hörweite der Wahlurne und -kabine zu unterlassen und durch Wahlausschuss und Wahlhelfende zu unterbinden.
+Werbung für einzelne \change{Kandidaten}{Kandidierenden} ist in Sicht- und Hörweite der Wahlurne und -kabine zu unterlassen und durch Wahlausschuss und Wahlhelfende zu unterbinden.
 Allgemeine Werbung für die Teilnahme an der Wahl ist zulässig.
 \end{contract}
 
@@ -631,16 +659,16 @@ auch die konstituierende Sitzung der gewählten Gremien soll bereits virtuell st
 \Clause{title={Zusammentritt der Gremien}}
 Die Wahlleitung hat das gewählte Gremium zu seiner konstituierenden Sitzung einzuberufen.
 Die Sitzung findet frühestens am 5. Tag und spätestens am 14. Tag nach dem letzten Wahltag statt.
-Die Wahlleitung leitet die Sitzung bis zur Wahl einer oder eines Vorsitzenden.
+Die Wahlleitung leitet die Sitzung bis zur Wahl einer \oldT{oder eines }Vorsitzenden.
 
-Die Wahlleitung kann festlegen, dass die konstituierende Sitzung als virtuelle Sitzung in elektronischer Kommunikation stattfindet, solange höhere Rechtsquellen dies erlauben.
-Sie stellt sicher, dass die Öffentlichkeit teilnehmen kann.
+\oldT{Die Wahlleitung kann festlegen, dass die konstituierende Sitzung als virtuelle Sitzung in elektronischer Kommunikation stattfindet, solange höhere Rechtsquellen dies erlauben.
+Sie stellt sicher, dass die Öffentlichkeit teilnehmen kann.}
 
 \Clause{title={Wahl des FSR-Vorstands}}
-Wird der Fachschaftsrat direkt gewählt, so wählt er auf seiner konstituierenden Sitzung aus seiner Mitte einen Vorsitzenden bzw. eine Vorsitzende, einen stellvertretenden Vorsitzenden bzw. eine stellvertretende Vorsitzende und einen Finanzreferenten bzw. eine Finanzreferentin.
+Wird der Fachschaftsrat direkt gewählt, so wählt er auf seiner konstituierenden Sitzung aus seiner Mitte \oldT{einen Vorsitzenden bzw. }eine Vorsitzende, \oldT{einen stellvertretenden Vorsitzenden bzw. }eine stellvertretende Vorsitzende und \oldT{einen Finanzreferenten bzw. }eine Finanzreferentin.
 
-Wird eine Fachschaftsvertretung gewählt, so wählt sie den Vorsitz des Fachschaftsrats, dessen Stellvertretung, den Finanzreferenten bzw. die Finanzreferentin und weitere Mitglieder mit der Mehrheit ihrer Mitglieder.
-Die Abwahl von Vorsitz, stellvertretendem Vorsitz oder Finanzreferenten bzw. Finanzreferentin ist nur durch die Wahl einer Nachfolge möglich.
+Wird eine Fachschaftsvertretung gewählt, so wählt sie \change{den Vorsitz}{die Vorsitzende} des Fachschaftsrats, \change{dessen Stellvertretung}{deren Stellvertreterin}, \oldT{den Finanzreferenten bzw. }die Finanzreferentin und weitere Mitglieder mit der Mehrheit ihrer Mitglieder.
+Die Abwahl \change{von Vorsitz, stellvertretendem Vorsitz oder Finanzreferenten bzw.}{der Vorsitzenden, stellvertretenden Vorsitzenden oder} Finanzreferentin ist nur durch die Wahl einer Nachfolge möglich.
 
 Die Fachschaftssatzung kann ergänzende Regelungen vorsehen.
 \end{contract}
@@ -658,7 +686,8 @@ Er darf nicht zugleich Mitglied eines Fachschaftswahlausschusses sein.
 Stimmrecht haben nur Ausschussmitglieder.
 
 Der WPAF wird einmal jährlich zu Beginn des Sommersemesters gewählt.
-§ 15 FKGO gilt entsprechend.
+\change{§ 15 FKGO gilt entsprechend.}{%
+Das Nähere regelt die Geschäftsordnung der Fachschaftenkonferenz.}
 \end{contract}
 
 \bemFr{\textbf{zu § 23:} Absatz sechs wurde im Sinne des vorigen Entwurfs einer ÄO neu gefasst und ebenso wortgetreu dem Entwurf folgend die Absätze 7 und 8 durch die Absätze 7 bis 12 neu ersetzt.}
@@ -680,9 +709,9 @@ Sämtliche Wahlunterlagen sind nach Beendigung der Wahl für 90 Tage sicher aufz
 Wählendenverzeichnis, Stimmzettel und Kandidaturen sind nach Ablauf dieser Frist zu vernichten.
 Protokolle des Wahlausschusses und das Wahlergebnis dürfen nicht vernichtet werden und sind mindestens 6 Jahre aufzubewahren.
 
-Bei Zweifeln an der ordnungsgemäßen Durchführung einer Wahlmuss das FSK innerhalb von 30 Tagen nach Bekanntmachung des Wahlergebnisses die Prüfung der Wahl durch den WPAF veranlassen.
+Bei Zweifeln an der ordnungsgemäßen Durchführung einer Wahl muss das FSK innerhalb von 30 Tagen nach Bekanntmachung des Wahlergebnisses die Prüfung der Wahl durch den WPAF veranlassen.
 
-Der WPAF kann Wahlen innerhalb von 30 Tage nach Bekanntmachung des Wahlergebnisses auch unabhängig von Einsprüchen im Rahmeneiner stichprobenartigen Prüfung prüfen.
+Der WPAF kann Wahlen innerhalb von 30 Tagen nach Bekanntmachung des Wahlergebnisses auch unabhängig von Einsprüchen im Rahmen einer stichprobenartigen Prüfung prüfen.
 
 Innerhalb von 7 Tagen nach den Prüfungsanforderungen nach Abs. 2, 7 oder 8 fordert der WPAF die Dokumente bei der Fachschaft an.
 Die Anforderung enthält im Mindesten eine Liste aller angeforderten Dokumente, die Frist, innerhalb derer sie eingereicht werden müssen, und einen Verweis auf Abs. 11.
@@ -704,7 +733,7 @@ Das FSK führt eine öffentlich im Internet einsehbare Liste, in der nach dem ak
 \Clause{title={Wiederholung der Wahl, Sonderfälle}}
 Wird keine gültige Kandidatur eingereicht, so setzt der Wahlausschuss einmalig eine Nachfrist von bis zu drei Tagen für die Einreichung von Kandidaturen.
 Wird auch innerhalb dieser Nachfrist keine gültige Kandidatur eingereicht, wird einmalig das Wahlverfahren von den bestehenden Wahlorganen auf der Grundlage des bereits aufgestellten Wählendenverzeichnisses nach Maßgabe dieser Wahlordnung wiederholt (Wiederholungswahl).
-Der Wahlausschuss bestimmt in diesem Fall unverzüglich den Termin für die Wiederholungswahl und die weiteren Termine und Fristen gemäß § 11 Abs. 2.
+Der Wahlausschuss bestimmt in diesem Fall unverzüglich den Termin für die Wiederholungswahl und die weiteren Termine und Fristen gemäß § 13 Abs. 5.
 Zwischen Festlegung des Termins der Wiederholungswahl und ihrem 1. Wahltag müssen mindestens 20 Tage liegen.
 
 Wurde bei einer Wiederholungswahl nach Ablauf einer Nachfrist keine Kandidatur eingereicht, so enthält der Stimmzettel keine Kandidaturen, sondern lediglich das Freifeld gemäß § 15 Abs. 3.
@@ -733,7 +762,7 @@ Briefwahl ist möglich.
 § 24 Abs. 1 findet keine Anwendung.
 
 Bis zum 25. Tag vor dem Wahltag legt der Wahlausschuss Ort und Zeit der Wahlvollversammlung fest.
-Die Punkte 1, 4 und 5 in § 11 Abs. 2 entfallen. Punkt 2 in § 13 Abs. 2 entfällt.
+Die Punkte 1, 4 und 5 in § 13 Abs. 5 entfallen. Punkt 2 in § 15 Abs. 2 entfällt.
 
 Die Tagesordnung der Wahlvollversammlung ist in der Wahlbekanntmachung zu veröffentlichen.
 Sie muss mindestens die folgenden Punkte umfassen:
@@ -779,23 +808,38 @@ Abgedruckt ist daher hier die bislang geltende Fassung.}
 \Clause{title={Option der Verhältniswahl}}
 Die Fachschaftssatzung kann festlegen, dass die Wahl abweichend von § 4 Abs. 2 nicht als Persönlichkeitswahl, sondern als personalisierte Verhältniswahl durchgeführt wird.
 
-Neben dem in Abs. 1 genannten Fall wird die Wahl ebenfalls als personalisierte Verhältniswahl durchgeführt, wenn
+%Neben dem in Abs. 1 genannten Fall wird die Wahl ebenfalls als personalisierte Verhältniswahl durchgeführt, wenn
+%\begin{enumerate}
+%\item bei weniger als 11 zu wählenden Personen 5 Wahlberechtigte
+%\item bei 11 zu wählenden Personen 6 Wahlberechtigte
+%\item bei 15 zu wählenden Personen 8 Wahlberechtigte
+%\item bei 19 zu wählenden Personen 10 Wahlberechtigte
+%\end{enumerate}
+%dies vor der Wahl eines Wahlausschusses für diese Wahl verlangen.
+%Das Verlangen ist der FSV bzw. falls keine existiert dem FSR einzureichen.
+%Es muss in zeitlichem Zusammenhang zur Wahl stehen.}
+\bemFe{Dieser Absatz wurde neu gefasst.}
+\begingroup
+\color{Green}
+Neben dem in Abs. 1 genannten Fall wird die Wahl ebenfalls als
+personalisierte Verhältniswahl durchgeführt, wenn
 \begin{enumerate}
 \item bei weniger als 11 zu wählenden Personen 5 Wahlberechtigte
 \item bei 11 zu wählenden Personen 6 Wahlberechtigte
 \item bei 15 zu wählenden Personen 8 Wahlberechtigte
 \item bei 19 zu wählenden Personen 10 Wahlberechtigte
 \end{enumerate}
-dies vor der Wahl eines Wahlausschusses für diese Wahl verlangen.
-Das Verlangen ist der FSV bzw. falls keine existiert dem FSR einzureichen.
-Es muss in zeitlichem Zusammenhang zur Wahl stehen.
+dies 25 Tage vor dem 1. Wahltag für diese Wahl verlangen. Das Verlangen ist der Wahlleitung einzureichen und von dieser zu prüfen.
+\endgroup
 
 Im Falle einer personalisierten Verhältniswahl muss jeder Wahlvorschlag einen Listennamen und mindestens eine Kandidatur in einer erkennbaren Reihenfolge enthalten.
 Eine Person kann nicht auf mehreren Wahlvorschlägen kandidieren.
 
+\newT{Wurde nur genau ein Wahlvorschlag oder nicht mehr Kandidaturen als Sitze zu besetzen sind zur Wahl zugelassen, so wird statt der Verhältniswahl eine Persönlichkeitswahl durchgeführt.}
+
 Der Stimmzettel enthält die Wahlvorschläge in einer vom Wahlausschuss gelosten zufälligen Reihenfolge, für jeden Wahlvorschlag unter dem Listennamen die Kandidaturen in der Reihenfolge aus dem Wahlvorschlag.
 Angekreuzt werden kann ein gesamter Wahlvorschlag oder eine einzelne Kandidatur.
-Die Regelung zum Freifeld (§ 15 Abs. 3) findet keine Anwendung.
+\oldT{Die Regelung zum Freifeld (§ 15 Abs. 3) findet keine Anwendung.}
 
 Die Verteilung der Sitze auf die Wahlvorschläge erfolgt nach dem Sainte-Laguë-Verfahren auf Grundlage der Gesamtzahl der Stimmen, die für einen Wahlvorschlag und seine Kandidaturen abgegeben wurden.
 Bei Höchstzahlgleichheit wird durch die Wahlleitung ausgelost, welchem Wahlvorschlag der Sitz zugeteilt wird.
@@ -827,13 +871,12 @@ Zudem wurde Abs. 3 dem neuen Publikationsverfahren angepasst. Der neu geschaffen
 Diese Wahlordnung kann nur auf Vorschlag der Fachschaftenkonferenz vom Studierendenparlament mit der Mehrheit seiner satzungsgemäßen Mitglieder geändert werden.
 Als eine Änderung ist sowohl eine Änderung des Wortlautes dieser Wahlordnung als auch die Ergänzung und Aufhebung von Bestimmungen anzusehen.
 \begin{addmargin}{0pt}
-\oldT{(2) ALTE FASSUNG Die Wahlordnung kann innerhalb der letzten 30 Tage vor Beginn 715 einer Wahl nicht
-716 mehr mit Wirkung für diese Wahl geändert werden.}
+\oldT{(2) ALTE FASSUNG Die Wahlordnung kann innerhalb der letzten 30 Tage vor Beginn 715 einer Wahl nicht mehr mit Wirkung für diese Wahl geändert werden.}
 \end{addmargin}
 
 Änderungen der Wahlordnung sind nur auf Wahlen anzuwenden, deren Wahlausschuss nach Inkrafttreten der Änderungen bestellt wurde.
 
-Die Änderungen treten mit ihrer Veröffentlichung durch die Öffentlichkeitsbeauftragte der Studierendenschaft in Kraft.
+Die Änderungen treten mit ihrer Veröffentlichung durch die Öffentlichkeitsbeauftragte der Studierendenschaft \newT{auf der Bekanntmachungsplattform der Studierendenschaft} in Kraft.
 
 Die Absätze 1 bis 3 gelten auch für die Errichtung einer neuen Ordnung mit identischem Geltungsbereich, die diese Ordnung ersetzt.
 \end{contract}
@@ -848,15 +891,14 @@ In Absatz 2 Satz 2 wird die 30-Tage-Regelung wie in § 27 II durch eine Regelung
 
 \begin{contract}
 \Clause{title={Inkrafttreten und Geltungsdauer}}
-Diese Wahlordnung tritt ab dem Zeitpunkt ihrer Veröffentlichung durch die Öffentlichkeitsbeauftragte der Studierendenschaft in Kraft.
+Diese Wahlordnung tritt ab dem Zeitpunkt ihrer Veröffentlichung durch die Öffentlichkeitsbeauftragte der Studierendenschaft \newT{auf der Bekanntmachungsplattform der Studierendenschaft} in Kraft.
 
 Mit Inkrafttreten dieser Wahlordnung tritt die Wahlordnung für die Wahlen der Fachschaftsvertretungen und Fachschaftsräte in der Fassung der Neufassung vom 16. Mai 2017 außer Kraft.
 Auf Wahlen, deren Wahlausschuss bereits vor Inkrafttreten dieser Ordnung bestellt wurde, findet die Wahlordnung für die Wahlen der Fachschaftsvertretungen und Fachschaftsräte der Rheinischen Friedrich-Wilhelms-Universität Bonn in der Fassung der Neufassung vom 16. Mai 2017 Anwendung.
 
-Die Satzung der Studierendenschaft und höherrangiges Recht brechen diese Ordnung.
-Diese Ordnung bricht die Satzung der Fachschaft.
+\change{Die Satzung der Studierendenschaft und höherrangiges Recht brechen diese Ordnung.
+Diese Ordnung bricht die Satzung der Fachschaft.}{Die Satzung der Studierendenschaft sowie höherrangiges Recht gehen dieser Ordnung vor. Diese Ordnung geht der Fachschaftssatzung vor.}
 \end{contract}
-
 
 
 \vspace{2em}
@@ -871,4 +913,8 @@ Vorsitzender der \textsc{Amt Einfügen}
 \end{center}
 
 
-\end{document}
+\end{document}en}
+\end{center}
+
+
+\end{document}ment}
