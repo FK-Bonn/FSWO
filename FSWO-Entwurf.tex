@@ -820,7 +820,9 @@ Die Fachschaftssatzung kann festlegen, dass die Wahl abweichend von \S~4 Abs. 2 
 %Es muss in zeitlichem Zusammenhang zur Wahl stehen.}
 \bemFe{Dieser Absatz wurde neu gefasst.}
 \begingroup
-\color{Green}
+\makeatletter
+  \ifFK@draft\color{Green}\fi
+\makeatother
 Neben dem in Abs. 1 genannten Fall wird die Wahl ebenfalls als
 personalisierte Verhältniswahl durchgeführt, wenn
 \begin{enumerate}
