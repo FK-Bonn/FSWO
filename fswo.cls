@@ -215,10 +215,12 @@ postskip=1.5ex plus .2ex%
 }
 
 \setlist[enumerate, 1]{
-  label = {\arabic*.}
+  label = {\arabic*.},
+  ref = {\arabic*}
 }
 \setlist[enumerate, 2]{
-  label= {\alph*.}
+  label= {\alph*.},
+  ref = {\arabic*}
 }
 
 % use French spacing
