@@ -24,6 +24,8 @@
 
 \DeclareBoolOption{multilinesections}
 
+\DeclareBoolOption{highlightlinks}
+
 % default values for the document class
 \DeclareStringOption[12]{DIV}
 \DeclareStringOption[half]{parskip}
@@ -175,13 +177,19 @@ official%                       %     %Felix: Argument war Teil des Ursprungspak
 % Randspaltenbemerkung an der linken Spalte
 \reversemarginpar
 
-% Configure further options of the "hyperref" package: colored links.
-\hypersetup{%
-	colorlinks=true,%
-	linkcolor=orange,%
-	citecolor=olive,%
-	urlcolor=cyan%
-}
+\ifFK@highlightlinks
+  % Configure further options of the "hyperref" package: colored links.
+  \hypersetup{%
+    colorlinks=true,%
+    linkcolor=orange,%
+    citecolor=olive,%
+    urlcolor=cyan%
+  }
+\else
+  \hypersetup{%
+    hidelinks
+  }
+\fi
 
 % Use serif font in all headings
 \addtokomafont{disposition}{\rmfamily}
@@ -225,3 +233,9 @@ postskip=1.5ex plus .2ex%
 
 % use French spacing
 \bbl@frenchspacing
+
+% define custom references
+\newcommand*\refClauseF  [1]{\hyperref[#1]{\S\S~\refClauseN*{#1}~f.}}
+\newcommand*\refClauseFF [1]{\hyperref[#1]{\S\S~\refClauseN*{#1}~ff.}}
+\newcommand*\refItem     [1]{\hyperref[#1]{Nummer~\ref*{#1}}}
+\newcommand*\refClausePar[1]{\hyperref[#1]{\refClause*{#1}~\refParL*{#1}}}
