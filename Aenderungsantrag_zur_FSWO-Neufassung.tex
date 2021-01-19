@@ -1,11 +1,13 @@
 % !TeX program = lualatex
-\documentclass[DIV=12, parskip=half, fontsize=12pt, a4paper]{scrartcl}
+\documentclass[DIV=12, parskip=half, fontsize=12pt, a4paper,fromlogo,%
+foldmarks=off,pagenumber=no%
+]{scrlttr2}
 
 %\usepackage[utf8]{inputenc}
 %\usepackage[T1]{fontenc}    % Font-Encoding
 %\usepackage{lmodern}        % LModern font
 \usepackage[ngerman]{babel} % deutsche Lokalisierung
-%\usepackage{graphicx}       % Einbindung von Bildern
+\usepackage{graphicx,svg}       % Einbindung von Bildern
 \usepackage{pdfpages}
 
 \usepackage{lineno}         % Nummerierung der Zeilen
@@ -16,18 +18,40 @@
 
 \usepackage{pdfpages}       % erlaubt das Einbinden von Seiten anderer PDF-Dateien
 
-\usepackage{draftwatermark}
-\SetWatermarkText{Entwurf}
+%\usepackage{draftwatermark}
+%\SetWatermarkText{Entwurf}
 
 
+\setplength{toaddrvpos}{10mm} %Backadress ganz oben
+\setplength{refvpos}{58mm}
+%%\setplength{subjectvpos}{45mm} %der Abstand von oben bis zur Betreff
+%\setplength{subjectbeforevskip}{-6.0cm}
+%\setplength{subjectaftervskip}{0cm}
 
-\title{Änderungsantrag zum Antrag zur Neufassung der Fachschaftswahlordnung (FSWO)}
-\author{Fachschaftenkonferenz}
-\date{18.\ Januar 2021}
+\setkomavar{place}{Bonn}
+\setkomavar{date}{18.\ Januar 2021}
+%\setkomavar{company}{AStA Uni Bonn\\
+%	Nassestraße 11\\[1ex]
+%	53113 Bonn}
+
+\setkomavar{backaddress}{AStA Uni Bonn $\cdot$ Nassestraße 11 $\cdot$ 53113 Bonn}
+%\setkomavar{Autor}{Philipp Wippermann}
+%\author{Fachschaftenkonferenz}
+
+\setkomavar{fromlogo}{\includegraphics[width=5cm]{fsk}}
+
+\setkomavar{signature}{Philipp Wippermann \\
+	{\scriptsize Vorsitzender des Fachschaftenkollektivs, Fachschaftenreferent}}
+
+
 
 \begin{document}
-  \maketitle
-  Das SP möge auf Vorschlag der Fachschaftenkonferenz beschließen:
+\begin{letter}
+	{An das\\
+	SP-Präsidium}
+	\setkomavar{subject}{\bfseries \large Änderungsantrag zum Antrag zur Neufassung der Fachschaftswahlordnung (FSWO)}
+
+  \opening{Das SP möge auf Vorschlag der Fachschaftenkonferenz beschließen:}
 
   \begin{linenumbers}
     Im \enquote{Antrag zur Neufassung der Fachschaftswahlordnung (FSWO)} vom 9.\ November 2020 wird die beigefügte Wahlordnung  wie folgt geändert:
@@ -57,10 +81,7 @@ Der zweite Punkt ist nur redaktionell.
   \vspace{1em}
   \textit{Ausgefertigt aufgrund des Beschlusses der Fachschaftenkonferenz vom 18.\ Januar 2021.}
 
-  Bonn, den 18.\ Januar 2021 \\
-  Philipp Wippermann \\
-  {\scriptsize Vorsitzender des Fachschaftenkollektivs, Fachschaftenreferent}
+  \closing{Bonn, den 18.\ Januar 2021 }
 
-%  \clearpage
-%  \includepdf[pages=-]{FSWO-Entwurf-ohne-Anmerkungen}
+\end{letter}
 \end{document}
